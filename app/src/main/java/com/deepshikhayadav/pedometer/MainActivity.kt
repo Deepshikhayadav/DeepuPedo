@@ -38,10 +38,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener, StepListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-      /*  tvSteps!!.findViewById<TextView>(R.id.tvSteps)
-        btnStart!!.findViewById<Button>(R.id.btnStart)
-        btnStop!!.findViewById<Button>(R.id.btnStop)*/
-
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         simpleStepDetector = StepDetector()
         simpleStepDetector!!.registerListener(this)
