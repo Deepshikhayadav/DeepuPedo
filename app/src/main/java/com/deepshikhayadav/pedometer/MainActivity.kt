@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener, StepListener {
         simpleStepDetector = StepDetector()
         simpleStepDetector!!.registerListener(this)
 
-        btnStart!!.setOnClickListener(View.OnClickListener {
+        btnStart!!.setOnClickListener{
             numSteps = 0
             sensorManager!!.registerListener(this, sensorManager!!.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_FASTEST)
-        })
+        }
 
-        btnStop!!.setOnClickListener(View.OnClickListener {
+        btnStop!!.setOnClickListener{
             sensorManager!!.unregisterListener(this)
-        })
+        }
     }
 }
